@@ -1,0 +1,46 @@
+@model StudentRegistration.Models.Student
+
+<h2>Student Registration</h2>
+
+<form asp-controller="Student"
+      asp-action="Register"
+      method="post">
+
+    <div class="mb-3">
+        <label>Student Name</label>
+        <input asp-for="Name" class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+        <label>Email Address</label>
+        <input asp-for="Email" type="email"
+               class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+        <label>Age</label>
+        <input asp-for="Age" type="number"
+               class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+        <label>Course</label>
+
+        <select asp-for="Course" class="form-control" required>
+            <option value="">Select Course</option>
+            <option value="C#">C#</option>
+            <option value="ASP.NET MVC">ASP.NET MVC</option>
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-success">
+        Register Student
+    </button>
+
+    <a asp-action="Index" class="btn btn-secondary">
+        Back
+    </a>
+
+</form>

@@ -1,0 +1,28 @@
+@model List<StudentRegistration.Models.Student>
+
+<h2>Registered Students</h2>
+
+<table border="1" cellpadding="10">
+
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Course</th>
+    </tr>
+
+    @foreach (var student in Model)
+    {
+        <tr>
+            <td>@student.Name</td>
+            <td>@student.Email</td>
+            <td>@student.Age</td>
+            <td>@student.Course</td>
+        </tr>
+    }
+
+</table>
+
+<br />
+
+<a href="/Student/Register">Register Another Student</a>

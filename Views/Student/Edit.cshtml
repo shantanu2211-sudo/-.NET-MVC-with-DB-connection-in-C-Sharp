@@ -1,0 +1,44 @@
+@model StudentRegistration.Models.Student
+
+<h2>Update Student Details</h2>
+
+<form asp-action="Edit" method="post">
+
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label>Student Name</label>
+        <input asp-for="Name" class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+        <label>Email Address</label>
+        <input asp-for="Email" type="email"
+               class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+        <label>Age</label>
+        <input asp-for="Age" type="number"
+               class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+        <label>Course</label>
+        <select asp-for="Course" class="form-control">
+            <option value="C#">C#</option>
+            <option value="ASP.NET MVC">ASP.NET MVC</option>
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Update Student
+    </button>
+
+    <a asp-action="Index" class="btn btn-secondary">
+        Cancel
+    </a>
+
+</form>
